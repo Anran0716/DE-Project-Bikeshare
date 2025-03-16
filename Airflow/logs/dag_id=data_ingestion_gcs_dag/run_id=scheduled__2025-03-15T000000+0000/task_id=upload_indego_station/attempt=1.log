@@ -1,0 +1,56 @@
+[2025-03-16T17:53:37.269+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-03-16T17:53:37.294+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data_ingestion_gcs_dag.upload_indego_station scheduled__2025-03-15T00:00:00+00:00 [queued]>
+[2025-03-16T17:53:37.311+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data_ingestion_gcs_dag.upload_indego_station scheduled__2025-03-15T00:00:00+00:00 [queued]>
+[2025-03-16T17:53:37.313+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 2
+[2025-03-16T17:53:37.330+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): upload_indego_station> on 2025-03-15 00:00:00+00:00
+[2025-03-16T17:53:37.339+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=459) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-03-16T17:53:37.340+0000] {standard_task_runner.py:72} INFO - Started process 461 to run task
+[2025-03-16T17:53:37.341+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'data_ingestion_gcs_dag', 'upload_indego_station', 'scheduled__2025-03-15T00:00:00+00:00', '--job-id', '661', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion_gcs_dag.py', '--cfg-path', '/tmp/tmp9i9dmdys']
+[2025-03-16T17:53:37.342+0000] {standard_task_runner.py:105} INFO - Job 661: Subtask upload_indego_station
+[2025-03-16T17:53:37.393+0000] {task_command.py:467} INFO - Running <TaskInstance: data_ingestion_gcs_dag.upload_indego_station scheduled__2025-03-15T00:00:00+00:00 [running]> on host b0577ed9eb82
+[2025-03-16T17:53:37.507+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='data_ingestion_gcs_dag' AIRFLOW_CTX_TASK_ID='upload_indego_station' AIRFLOW_CTX_EXECUTION_DATE='2025-03-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-03-15T00:00:00+00:00'
+[2025-03-16T17:53:37.511+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-03-16T17:53:37.513+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-03-16T17:53:37.513+0000] {logging_mixin.py:190} INFO - Current task name:upload_indego_station state:running start_date:2025-03-16 17:53:37.295740+00:00
+[2025-03-16T17:53:37.514+0000] {logging_mixin.py:190} INFO - Dag name:data_ingestion_gcs_dag and current dag run status:running
+[2025-03-16T17:53:37.515+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-03-16T17:53:41.957+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-03-16T17:53:41.968+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-03-16T17:53:41.969+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=data_ingestion_gcs_dag, task_id=upload_indego_station, run_id=scheduled__2025-03-15T00:00:00+00:00, execution_date=20250315T000000, start_date=20250316T175337, end_date=20250316T175341
+[2025-03-16T17:53:41.997+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-03-16T17:53:41.997+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-03-16T17:53:41.998+0000] {logging_mixin.py:190} INFO - Dag name:data_ingestion_gcs_dag queued_at:2025-03-16 17:52:58.267919+00:00
+[2025-03-16T17:53:41.998+0000] {logging_mixin.py:190} INFO - Task hostname:b0577ed9eb82 operator:PythonOperator
+[2025-03-16T17:53:42.049+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-03-16T17:53:42.070+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-03-16T17:53:42.072+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-03-16T18:56:15.516+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-03-16T18:56:15.571+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data_ingestion_gcs_dag.upload_indego_station scheduled__2025-03-15T00:00:00+00:00 [queued]>
+[2025-03-16T18:56:15.592+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data_ingestion_gcs_dag.upload_indego_station scheduled__2025-03-15T00:00:00+00:00 [queued]>
+[2025-03-16T18:56:15.593+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 2
+[2025-03-16T18:56:15.621+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): upload_indego_station> on 2025-03-15 00:00:00+00:00
+[2025-03-16T18:56:15.637+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=426) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-03-16T18:56:15.641+0000] {standard_task_runner.py:72} INFO - Started process 435 to run task
+[2025-03-16T18:56:15.641+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'data_ingestion_gcs_dag', 'upload_indego_station', 'scheduled__2025-03-15T00:00:00+00:00', '--job-id', '24', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion_gcs.py', '--cfg-path', '/tmp/tmpz3eqxzqe']
+[2025-03-16T18:56:15.643+0000] {standard_task_runner.py:105} INFO - Job 24: Subtask upload_indego_station
+[2025-03-16T18:56:15.749+0000] {task_command.py:467} INFO - Running <TaskInstance: data_ingestion_gcs_dag.upload_indego_station scheduled__2025-03-15T00:00:00+00:00 [running]> on host ea596c643a9a
+[2025-03-16T18:56:15.917+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='data_ingestion_gcs_dag' AIRFLOW_CTX_TASK_ID='upload_indego_station' AIRFLOW_CTX_EXECUTION_DATE='2025-03-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-03-15T00:00:00+00:00'
+[2025-03-16T18:56:15.919+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-03-16T18:56:15.920+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-03-16T18:56:15.921+0000] {logging_mixin.py:190} INFO - Current task name:upload_indego_station state:running start_date:2025-03-16 18:56:15.572944+00:00
+[2025-03-16T18:56:15.922+0000] {logging_mixin.py:190} INFO - Dag name:data_ingestion_gcs_dag and current dag run status:running
+[2025-03-16T18:56:15.923+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-03-16T18:56:18.334+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-03-16T18:56:18.384+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-03-16T18:56:18.393+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=data_ingestion_gcs_dag, task_id=upload_indego_station, run_id=scheduled__2025-03-15T00:00:00+00:00, execution_date=20250315T000000, start_date=20250316T185615, end_date=20250316T185618
+[2025-03-16T18:56:18.484+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-03-16T18:56:18.493+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-03-16T18:56:18.495+0000] {logging_mixin.py:190} INFO - Dag name:data_ingestion_gcs_dag queued_at:2025-03-16 18:49:30.868563+00:00
+[2025-03-16T18:56:18.497+0000] {logging_mixin.py:190} INFO - Task hostname:ea596c643a9a operator:PythonOperator
+[2025-03-16T18:56:18.559+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-03-16T18:56:18.677+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-03-16T18:56:18.709+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,30 @@
+[2025-03-16T21:52:33.601+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-03-16T21:52:33.658+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data_ingestion_gcs_dag.create_external_bq_table manual__2025-03-16T21:51:17.045850+00:00 [queued]>
+[2025-03-16T21:52:33.719+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data_ingestion_gcs_dag.create_external_bq_table manual__2025-03-16T21:51:17.045850+00:00 [queued]>
+[2025-03-16T21:52:33.721+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 2
+[2025-03-16T21:52:33.757+0000] {taskinstance.py:2890} INFO - Executing <Task(BigQueryCreateExternalTableOperator): create_external_bq_table> on 2025-03-16 21:51:17.045850+00:00
+[2025-03-16T21:52:33.769+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=786) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-03-16T21:52:33.772+0000] {standard_task_runner.py:72} INFO - Started process 788 to run task
+[2025-03-16T21:52:33.772+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'data_ingestion_gcs_dag', 'create_external_bq_table', 'manual__2025-03-16T21:51:17.045850+00:00', '--job-id', '705', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion_gcs_dag.py', '--cfg-path', '/tmp/tmpbxpj63zq']
+[2025-03-16T21:52:33.774+0000] {standard_task_runner.py:105} INFO - Job 705: Subtask create_external_bq_table
+[2025-03-16T21:52:33.854+0000] {task_command.py:467} INFO - Running <TaskInstance: data_ingestion_gcs_dag.create_external_bq_table manual__2025-03-16T21:51:17.045850+00:00 [running]> on host 5c7a1daace86
+[2025-03-16T21:52:34.034+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='data_ingestion_gcs_dag' AIRFLOW_CTX_TASK_ID='create_external_bq_table' AIRFLOW_CTX_EXECUTION_DATE='2025-03-16T21:51:17.045850+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-16T21:51:17.045850+00:00'
+[2025-03-16T21:52:34.037+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-03-16T21:52:34.038+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-03-16T21:52:34.039+0000] {logging_mixin.py:190} INFO - Current task name:create_external_bq_table state:running start_date:2025-03-16 21:52:33.660105+00:00
+[2025-03-16T21:52:34.039+0000] {logging_mixin.py:190} INFO - Dag name:data_ingestion_gcs_dag and current dag run status:running
+[2025-03-16T21:52:34.040+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-03-16T21:52:34.042+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2025-03-16T21:52:34.044+0000] {connection.py:277} WARNING - Connection schemes (type: google_cloud_platform) shall not contain '_' according to RFC3986.
+[2025-03-16T21:52:34.047+0000] {base.py:84} INFO - Retrieving connection 'google_cloud_default'
+[2025-03-16T21:52:35.371+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-03-16T21:52:35.372+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=data_ingestion_gcs_dag, task_id=create_external_bq_table, run_id=manual__2025-03-16T21:51:17.045850+00:00, execution_date=20250316T215117, start_date=20250316T215233, end_date=20250316T215235
+[2025-03-16T21:52:35.397+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-03-16T21:52:35.397+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-03-16T21:52:35.398+0000] {logging_mixin.py:190} INFO - Dag name:data_ingestion_gcs_dag queued_at:2025-03-16 21:51:17.198952+00:00
+[2025-03-16T21:52:35.399+0000] {logging_mixin.py:190} INFO - Task hostname:5c7a1daace86 operator:BigQueryCreateExternalTableOperator
+[2025-03-16T21:52:35.437+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-03-16T21:52:35.470+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-03-16T21:52:35.473+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

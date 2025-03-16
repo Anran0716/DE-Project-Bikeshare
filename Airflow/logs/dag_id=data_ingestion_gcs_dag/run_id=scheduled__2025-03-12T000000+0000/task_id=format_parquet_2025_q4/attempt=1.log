@@ -1,0 +1,28 @@
+[2025-03-13T03:44:16.489+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-03-13T03:44:16.650+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data_ingestion_gcs_dag.format_parquet_2025_q4 scheduled__2025-03-12T00:00:00+00:00 [queued]>
+[2025-03-13T03:44:16.751+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data_ingestion_gcs_dag.format_parquet_2025_q4 scheduled__2025-03-12T00:00:00+00:00 [queued]>
+[2025-03-13T03:44:16.753+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 2
+[2025-03-13T03:44:16.855+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): format_parquet_2025_q4> on 2025-03-12 00:00:00+00:00
+[2025-03-13T03:44:16.891+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=187) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-03-13T03:44:16.907+0000] {standard_task_runner.py:72} INFO - Started process 231 to run task
+[2025-03-13T03:44:16.982+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'data_ingestion_gcs_dag', 'format_parquet_2025_q4', 'scheduled__2025-03-12T00:00:00+00:00', '--job-id', '431', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion_gcs_dag.py', '--cfg-path', '/tmp/tmpgvq_8mp1']
+[2025-03-13T03:44:17.005+0000] {standard_task_runner.py:105} INFO - Job 431: Subtask format_parquet_2025_q4
+[2025-03-13T03:44:17.977+0000] {task_command.py:467} INFO - Running <TaskInstance: data_ingestion_gcs_dag.format_parquet_2025_q4 scheduled__2025-03-12T00:00:00+00:00 [running]> on host b0577ed9eb82
+[2025-03-13T03:44:18.906+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='data_ingestion_gcs_dag' AIRFLOW_CTX_TASK_ID='format_parquet_2025_q4' AIRFLOW_CTX_EXECUTION_DATE='2025-03-12T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-03-12T00:00:00+00:00'
+[2025-03-13T03:44:18.935+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-03-13T03:44:18.937+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-03-13T03:44:18.952+0000] {logging_mixin.py:190} INFO - Current task name:format_parquet_2025_q4 state:running start_date:2025-03-13 03:44:16.661020+00:00
+[2025-03-13T03:44:18.953+0000] {logging_mixin.py:190} INFO - Dag name:data_ingestion_gcs_dag and current dag run status:running
+[2025-03-13T03:44:18.955+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-03-13T03:44:18.958+0000] {data_ingestion_gcs_dag.py:72} ERROR - Invalid ZIP file: /opt/***/indego-trips-2025-q4.zip
+[2025-03-13T03:44:18.969+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-03-13T03:44:19.029+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-03-13T03:44:19.030+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=data_ingestion_gcs_dag, task_id=format_parquet_2025_q4, run_id=scheduled__2025-03-12T00:00:00+00:00, execution_date=20250312T000000, start_date=20250313T034416, end_date=20250313T034419
+[2025-03-13T03:44:19.233+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-03-13T03:44:19.237+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-03-13T03:44:19.239+0000] {logging_mixin.py:190} INFO - Dag name:data_ingestion_gcs_dag queued_at:2025-03-13 00:00:00.273574+00:00
+[2025-03-13T03:44:19.240+0000] {logging_mixin.py:190} INFO - Task hostname:b0577ed9eb82 operator:PythonOperator
+[2025-03-13T03:44:19.351+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-03-13T03:44:19.381+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

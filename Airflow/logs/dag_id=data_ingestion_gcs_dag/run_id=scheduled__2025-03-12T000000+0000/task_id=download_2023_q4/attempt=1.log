@@ -1,0 +1,32 @@
+[2025-03-13T03:43:57.050+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-03-13T03:43:57.096+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data_ingestion_gcs_dag.download_2023_q4 scheduled__2025-03-12T00:00:00+00:00 [queued]>
+[2025-03-13T03:43:57.114+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data_ingestion_gcs_dag.download_2023_q4 scheduled__2025-03-12T00:00:00+00:00 [queued]>
+[2025-03-13T03:43:57.116+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 2
+[2025-03-13T03:43:57.160+0000] {taskinstance.py:2890} INFO - Executing <Task(BashOperator): download_2023_q4> on 2025-03-12 00:00:00+00:00
+[2025-03-13T03:43:57.242+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'data_ingestion_gcs_dag', 'download_2023_q4', 'scheduled__2025-03-12T00:00:00+00:00', '--job-id', '416', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion_gcs_dag.py', '--cfg-path', '/tmp/tmp6_n291ux']
+[2025-03-13T03:43:57.241+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=102) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-03-13T03:43:57.248+0000] {standard_task_runner.py:105} INFO - Job 416: Subtask download_2023_q4
+[2025-03-13T03:43:57.270+0000] {standard_task_runner.py:72} INFO - Started process 125 to run task
+[2025-03-13T03:43:58.534+0000] {task_command.py:467} INFO - Running <TaskInstance: data_ingestion_gcs_dag.download_2023_q4 scheduled__2025-03-12T00:00:00+00:00 [running]> on host b0577ed9eb82
+[2025-03-13T03:43:59.376+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='data_ingestion_gcs_dag' AIRFLOW_CTX_TASK_ID='download_2023_q4' AIRFLOW_CTX_EXECUTION_DATE='2025-03-12T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-03-12T00:00:00+00:00'
+[2025-03-13T03:43:59.384+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-03-13T03:43:59.388+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-03-13T03:43:59.389+0000] {logging_mixin.py:190} INFO - Current task name:download_2023_q4 state:running start_date:2025-03-13 03:43:57.097250+00:00
+[2025-03-13T03:43:59.397+0000] {logging_mixin.py:190} INFO - Dag name:data_ingestion_gcs_dag and current dag run status:running
+[2025-03-13T03:43:59.415+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-03-13T03:43:59.427+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-03-13T03:43:59.430+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'curl -sSL -o /opt/***/indego-trips-2023-q4.zip https://www.rideindego.com/wp-content/uploads/2024/01/indego-trips-2023-q4.zip && ls -lh /opt/***/indego-trips-2023-q4.zip']
+[2025-03-13T03:43:59.489+0000] {subprocess.py:99} INFO - Output:
+[2025-03-13T03:44:03.506+0000] {subprocess.py:106} INFO - -rw-rw-r-- 1 default root 5.4M Mar 13 03:44 /opt/***/indego-trips-2023-q4.zip
+[2025-03-13T03:44:03.522+0000] {subprocess.py:110} INFO - Command exited with return code 0
+[2025-03-13T03:44:03.775+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-03-13T03:44:03.777+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=data_ingestion_gcs_dag, task_id=download_2023_q4, run_id=scheduled__2025-03-12T00:00:00+00:00, execution_date=20250312T000000, start_date=20250313T034357, end_date=20250313T034403
+[2025-03-13T03:44:04.013+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-03-13T03:44:04.034+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-03-13T03:44:04.037+0000] {logging_mixin.py:190} INFO - Dag name:data_ingestion_gcs_dag queued_at:2025-03-13 00:00:00.273574+00:00
+[2025-03-13T03:44:04.039+0000] {logging_mixin.py:190} INFO - Task hostname:b0577ed9eb82 operator:BashOperator
+[2025-03-13T03:44:04.128+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-03-13T03:44:04.353+0000] {taskinstance.py:3901} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-03-13T03:44:04.374+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
