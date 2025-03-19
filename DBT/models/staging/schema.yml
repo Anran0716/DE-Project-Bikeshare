@@ -1,0 +1,59 @@
+version: 2
+
+sources:
+  - name: staging
+    database: kestra-sandbox-451604
+    schema: Indego_project
+    tables:
+      - name: indego_trips_all
+
+models:
+  - name: stg_tripdata
+    description: >
+      Indego trip data are publicly available datasets from Indego, Philadelphia’s bike-share system. 
+      It contains bikeshare trip data in Philadelphia from 2023 to 2024. 
+    columns:
+      - name: trip_id
+        description: Primary key for this table, locally unique integer that identifies the trip
+        tests:
+          - unique
+          - not_null
+
+      - name: duration
+        description: Length of trip in minutes
+        tests:
+          - not_null
+
+      - name: start_time
+        description: The date/time when the trip began, presented in ISO 8601 format in local time
+        tests:
+          - not_null
+
+      - name: end_time
+        description: The date/time when the trip ended, presented in ISO 8601 format in local time
+        tests:
+          - not_null
+
+      - name: start_station
+        description: The station ID where the trip originated
+        tests:
+          - not_null
+
+      - name: start_lat
+        description: The latitude of the station where the trip originated
+
+      - name: start_lon
+        description: The longitude of the station where the trip originated
+
+      - name: end_station
+        description: The station ID where the trip terminated
+        tests:
+          - not_null
+
+      - name: end_lat
+        description: The latitude of the station where the trip terminated
+
+      - name: end_lon
+        description: The longitude of the station where the trip terminated
+
+           
