@@ -12,7 +12,35 @@ Philadelphia’s bikeshare system, [Indego](https://www.rideindego.com/), has pr
 
 ## Workflow
 
+<img src="Figures/workflow.jpg" alt="wf" height="500" width="800">
+
+**Step 1: Setup**
+
+- Set up GCP environment, Docker, and configure necessary IAM roles.
+
+**Step 2: Data Ingestion & Loading**
+
+- Use Docker to containerize the pipeline. 
+- Build Airflow DAGs for workflow automation.
+- Load the raw data in Google Bigquery. 
+
+**Step 3: Data Transformation**
+
+- Implement data partitioning and indexing in BigQuery.
+- Optimize data transformations using DBT.
+
+**Step 4: Data Visualization**
+
+- Build Power BI dashboards for analytics and insights.
+
 ### Tools & Technology
+
+- **Cloud Provider:** Google Cloud Platform (GCP)
+- **Orchestration:** Apache Airflow (Containerized with Docker)
+- **Data Processing:** DBT for transformations
+- **Storage & Querying:** GCS, BigQuery
+- **Streaming:** Pub/Sub
+- **Visualization:** Power BI
 
 ### Dashboard & Visualization
 
