@@ -1,0 +1,63 @@
+version: 2
+
+models:
+    - name: fact_trips
+      description: >
+        Primary fact table containing cleaned and transformed trip data.
+        This table is used for further aggregations and reporting. 
+
+    - name: trip_summary_annual
+      description: >
+        Annual summary of trip data.
+        This table offers a high-level overview for stakeholders to monitor year-over-year performance.
+      columns:
+        - name: year
+          data_type: int64
+          description: ""
+
+        - name: total_trips
+          data_type: string
+          description: ""
+
+        - name: total_duration
+          data_type: string
+          description: ""
+
+        - name: avg_trip_duration
+          data_type: float
+          description: ""
+
+        - name: electric_bike_pct
+          data_type: int64
+          description: ""
+
+        - name: classic_bike_pct
+          data_type: int64
+          description: ""
+
+        - name: monthly_pass_pct
+          data_type: int64
+          description: ""
+        
+        - name: annual_pass_pct
+          data_type: int64
+          description: ""
+
+        - name: walkup_pct
+          data_type: int64
+          description: ""
+
+    - name: monthly_trip_count_by_bike_type
+      description: >
+        Monthly count of trips categorized by bike type.
+        It aggregates trip data to show how bike usage patterns vary by month and type, helping to analyze seasonal trends and operational efficiency.
+
+    - name: avg_hourly_ridership
+      description: >
+        This table summarizes the average hourly ridership based on trip data. 
+        It aggregates the number of trips by hour and computes the average trips per hour, providing insights into peak and off-peak times.
+
+    - name: station_trip_count_by_year
+      description: >
+        This table summarizes the total number of trips for each station annually. 
+        It provides a clear view of station-level demand over time, supporting decisions related to station expansion and resource allocation.
