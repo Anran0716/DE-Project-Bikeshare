@@ -15,17 +15,10 @@ Philadelphia’s bikeshare system, [Indego](https://www.rideindego.com/), has pr
 <img src="Figures/workflow.jpg" alt="wf" height="400" width="800">
 
 The ETL pipeline is designed to Extract data from various sources, Transform it using DBT, and Load it into BigQuery for analysis. The process involves the following steps:
-- **Extraction:**
--- Docker containerized Airflow orchestrates data extraction from CSV files.
-
-- **Loading:**
--- Extracted data is loaded into BigQuery using Airflow DAGs.
-
-- **Transformation:**
--- DBT performs data cleaning, normalization, and aggregation directly in BigQuery.
-
-- **Visualization:**
--- Transformed data is visualized using Power BI, providing actionable insights into bike share usage.
+- **Extraction:** Docker containerized Airflow orchestrates data extraction from CSV files.
+- **Loading:** Extracted data is loaded into BigQuery using Airflow DAGs.
+- **Transformation:** DBT performs data cleaning, normalization, and aggregation directly in BigQuery.
+- **Visualization:** Transformed data is visualized using Power BI, providing actionable insights into bike share usage.
 
 
 ### Tools & Technology
