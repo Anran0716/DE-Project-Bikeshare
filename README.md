@@ -34,7 +34,7 @@ The ETL pipeline is designed to Extract data from various sources, Transform it 
 
 ## General Guidance
 
-**Step 1: Setup**
+[**Step 1: Setup**](https://github.com/Anran0716/DE-Project-Bikeshare/tree/main/Terraform)
 
 - Set up GCP environment, Terraform, Docker, and configure necessary IAM roles.
 

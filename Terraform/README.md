@@ -34,4 +34,4 @@ terraform plan
 terraform apply
 ```
 
-Once successully running, you should see a new dataset `Indego_project` created in your project. 
+Once successully running, you should see a new dataset `Indego_project` created in your project under Bigquery. 
