@@ -9,7 +9,6 @@ terraform {
 
 provider "google" {
 # Credentials only needs to be set if you do not have the GOOGLE_APPLICATION_CREDENTIALS set
-  #credentials = "./keys/my-creds.json"
   project = "kestra-sandbox-451604"
   region  = "europe-west2"
 }
