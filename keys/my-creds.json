@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "kestra-sandbox-451604",
+  "private_key_id": "c4ebd924baac54ee7623dc539db4476c84f327c9",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDfTi9/Dj/5bLby\nANPsAZHmX+CNZE/BP6qf93ZwH9WR8QoQIWEpDD1bwRtGcxDMqjyZqx7CrNYBouce\nn/CSNO4OSxfrL9DmlsuBtMORmwPzMVSqx1yE5VRhkxl79npRKolYx5JcocqJWqoE\nxKxJxY6F82NFH8Y2ax4poi9Gp8LJVsxSy+8Zb1xA9oPdwSGXnQN8+JsV2RYFWAWM\n7PvcZlrFVTQTf8OqlrJAqhbYFA0e1VYCZx9LqqTH5pPhsiLCB5CwMruGd32RvTFh\n5hugmQZcuDYDXEqrGgofO1iZYZg/1QeCMQOsDSURHkhnPMG3iVEXLs6sdv1RJ1Sx\no7BulgAjAgMBAAECggEAWEyHznNZi6zX2HDIW8GxKgnOdspsGQuuUevd2u9TmY5Y\n/tDcJQmQd6gvu1dDlNJZ/R+jnbIPO31pa3wt+fpRCbja3+Y78fo9xW+vh3NnB/KB\nOrhzVp+CEsVCZfisHE04GzFrKBLXziFaKmGEiPVD6qa3ob0zORB5UFgv3n32sXrS\nWsuY7nHvtpwfCYQlmfzfPbwIU2gqSa2ceywQI5PIyv+WcJs4rhfsFTxyXWWEEubX\n2GvHUz2nU9LTca04s3NSwt8SbK1whxibYNJQQwUlsaHQgw9lvTRznkH0A9Zc4dWl\nOS5Bv6I0KBOBEc/DWsQMimIFWWl0B5fVzOABckWtpQKBgQDzAahZHZr9OMxsnPJ5\n1EInWzyCBMmcSv4gl5gI7ru8cR1+9NWTitm605bFwOUKKll/TKgdqHbbfdb9SDEh\nSl6AgJDWZ6ShQv1QuhgW8px219o1BN5XclSTiLXgosF1gfYxC1wJRD5+6OyN6CLz\ne7HSr2Hdema/xbpfaqANFFGh7wKBgQDrPtqnknwtmAJIjRfdYMqCzZnCWPymWzI3\nGfJSjV7JUCYW7SBzxRDok7DV6lSy536A5YNXiDbMcNkM9KC3pciVeMA0ZiJMMVbo\nStmM/yKzLt5eM0eGlJYi7HhCF6BXS0mwgdoNMNkO6s6KY6tirgZk/49/6vlIdINx\nZT6o6BapDQKBgEZRMHm5C2RCz0SOlcuTFCF3USb+Y6iKOscLlr7e9gwtXy+hgTvU\nbfSVzYcjriMm5gbkE7GhUeNpopBgF3deocHlcgPYsdbIH60AbIAXbBcnlsjIw93i\nA389jAOYlQp/tNG0S8mSqdLna6wUhCiYnngsr9D63kiX2rpJjE68lnKZAoGBAI7h\nXTLcUNnscq6YK7+E81sg/1vAaqurxkMbWkfzn3eMW6YfHk/SiKOKWKSEsC79VaN6\nQxzeGdJwVBR/XEJOyhanAa6RvhEjApMSKzJtIClOtTbn1HCUPOA3Wg9ihDug+b/g\nDo1mdt+NlCcPxF+qLS4Y3pKmKARu6AruoHE8jc7dAoGBAN0YVj2LQw3tda0Xpnoo\n+vX1EXdQJknaZc6oMCXqEhERJ5625lQQRRrQkfFCA6z0rG/j8mgDT3EKdLI/+a7H\nVV0tkvagrVTh8/NNODAyNqSYdG2V+xHSrEFa6webflRN7Qlo2g8rSr0GdIjHFEvf\ndpKVgH3uBgs+7nzOmVj4Rly2\n-----END PRIVATE KEY-----\n",
+  "client_email": "final-project@kestra-sandbox-451604.iam.gserviceaccount.com",
+  "client_id": "101064522401704037127",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/final-project%40kestra-sandbox-451604.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

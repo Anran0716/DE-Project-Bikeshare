@@ -31,7 +31,7 @@ The ETL pipeline is designed to Extract data from various sources, Transform it 
 
 ### Dashboard & Visualization
 
-## Instructions on running the code
+## General Guidance
 
 **Step 1: Setup**
 
