@@ -24,6 +24,7 @@ The ETL pipeline is designed to Extract data from various sources, Transform it 
 ### Tools & Technology
 
 - **Cloud Provider:** Google Cloud Platform (GCP)
+- **Infrastructure as Code:** Terraform
 - **Orchestration:** Apache Airflow (Containerized with Docker)
 - **Data Processing:** DBT for transformations
 - **Storage & Querying:** GCS, BigQuery
@@ -35,7 +36,7 @@ The ETL pipeline is designed to Extract data from various sources, Transform it 
 
 **Step 1: Setup**
 
-- Set up GCP environment, Docker, and configure necessary IAM roles.
+- Set up GCP environment, Terraform, Docker, and configure necessary IAM roles.
 
 **Step 2: Data Ingestion & Loading**
 
