@@ -9,15 +9,15 @@ terraform {
 
 provider "google" {
 # Credentials only needs to be set if you do not have the GOOGLE_APPLICATION_CREDENTIALS set
-  project = "kestra-sandbox-451604"
-  region  = "europe-west2"
+  project = "<Your Project ID>"
+  region  = "<Your Project region>"
 }
 
 
 
 resource "google_storage_bucket" "data-lake-bucket" {
-  name          = "kestra-de-zoomcamp-bucket-kelly"
-  location      = "europe-west2"
+  name          = "<Your Unique Bucket Name>"
+  location      = "<Your Project region>"
 
   # Optional, but recommended settings:
   storage_class = "STANDARD"
@@ -41,5 +41,5 @@ resource "google_storage_bucket" "data-lake-bucket" {
 
 
 resource "google_bigquery_dataset" "dataset" {
-  dataset_id = "Indego_project2"
+  dataset_id = "Indego_project"
 }
