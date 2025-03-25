@@ -38,13 +38,13 @@ The ETL pipeline is designed to Extract data from various sources, Transform it 
 
 - Set up GCP environment, Terraform, Docker, and configure necessary IAM roles.
 
-**Step 2: Data Ingestion & Loading**
+[**Step 2: Data Ingestion & Loading**](https://github.com/Anran0716/DE-Project-Bikeshare/tree/main/Airflow)
 
 - Use Docker to containerize the pipeline. 
 - Build Airflow DAGs for workflow automation.
 - Load the raw data in Google Bigquery. 
 
-**Step 3: Data Transformation**
+[**Step 3: Data Transformation**](https://github.com/Anran0716/DE-Project-Bikeshare/tree/main/DBT)
 
 - Implement data partitioning and indexing in BigQuery.
 - Optimize data transformations using DBT.
