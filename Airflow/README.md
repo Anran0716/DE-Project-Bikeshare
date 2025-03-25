@@ -39,17 +39,17 @@ docker-compose up
 
 Once successfully setting up, Login to Airflow web UI on `localhost:8081` with creds. The page should look like this.
 
-<img src="./Figures/airflow1.jpg" alt="airflow1" height="400" width="800">
+<img src="../Figures/airflow1.jpg" alt="airflow1" height="400" width="800">
 
 Click the `data_ingestion_gcs_dag` and run the [code](https://github.com/Anran0716/DE-Project-Bikeshare/blob/main/Airflow/dags/data_ingestion_gcs_dag.py).
 This code aims to:
-- extract indego trip data (2023-2024) and station data [here](https://www.rideindego.com/about/data/)
-- merge all the trip data 
-- create external table `indego_trips_all` and `indego_stations`
-- upload both tables to the `Indego_project` dataset in your GCP project
+- Extract indego trip data (2023-2024) and station data from [here](https://www.rideindego.com/about/data/)
+- Merge all the trip data 
+- Create external table `indego_trips_all` and `indego_stations`
+- Upload both tables to the `Indego_project` dataset in your GCP project
 
-<img src="./Figures/airflow2.jpg" alt="airflow2" height="400" width="800">
+<img src="../Figures/airflow2.jpg" alt="airflow2" height="400" width="800">
 
 Once successfully running this code, you should be able to see two new external tables, `indego_trips_all` and `indego_stations`, in the `Indego_project` dataset in your GCP project. 
 
-<img src="./Figures/bigquery.jpg" alt="bigquery" height="600" width="400">
+<img src="../Figures/bigquery.jpg" alt="bigquery" height="600" width="400">
