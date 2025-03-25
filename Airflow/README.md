@@ -35,7 +35,7 @@ docker-compose up airflow-init
 docker-compose up
 ```
 
-**3. Data Ingestion & Loading:**
+**3. Extract and load the raw data in Google Bigquery:**
 
 Once successfully setting up, Login to Airflow web UI on `localhost:8081` with creds. The page should look like this.
 
