@@ -14,7 +14,7 @@ After transforming and loading the data into BigQuery with Airflow, we use Data 
 
 Here is the lineage graph for DBT. The goal is to transform raw data, `Indego_trips_all` and `indego_stations` into a series of aggregated tables for further dashboard visualization. 
 
-<img src="../Figures/DBT.jpg" alt="airflow1" height="450" width="1000">
+<img src="../Figures/DBT.jpg" alt="airflow1" height="350" width="1000">
 
 Model overview:
 - [stg_tripdata](https://github.com/Anran0716/DE-Project-Bikeshare/blob/main/DBT/models/staging/stg_tripdata.sql): This staging model cleaned raw trip data from `indego_trips_all` table.
@@ -29,8 +29,8 @@ To run the DBT model:
 - Run `dbt build`
 - If you want to check single model, using `dbt compile` and `dbt run --select {model_name}`
 
-<img src="../Figures/DBT2.jpg" alt="airflow1" height="450" width="1000">
+<img src="../Figures/DBT2.jpg" alt="airflow1" height="650" width="1200">
 
 After successfully running these models, in your Bigquery project, you should see a few table being created. 
 
-<img src="../Figures/dbt3.jpg" alt="airflow1" height="800" width="800">
+<img src="../Figures/dbt3.jpg" alt="airflow1" height="500" width="600">
