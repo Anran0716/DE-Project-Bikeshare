@@ -29,8 +29,8 @@ To run the DBT model:
 - Run `dbt build`
 - If you want to check single model, using `dbt compile` and `dbt run --select {model_name}`
 
-<img src="../Figures/DBT2.jpg" alt="airflow1" height="650" width="1200">
+<img src="../Figures/DBT2.jpg" alt="airflow1" height="750" width="1400">
 
 After successfully running these models, in your Bigquery project, you should see a few table being created. 
 
-<img src="../Figures/dbt3.jpg" alt="airflow1" height="500" width="600">
+<img src="../Figures/dbt3.jpg" alt="airflow1" height="500" width="650">
