@@ -33,7 +33,7 @@ The ETL pipeline is designed to Extract data from various sources, Transform it 
 
 ### Dashboard & Visualization
 
-[Dashboard](https://us-east-1.online.tableau.com/t/kellyzheng-402c63b0c7/views/IndegoBikeshareAnalysis/IndegoBikeshareAnalysis)
+[Dashboard](https://public.tableau.com/views/DEproject_17433593480040/IndegoBikeshareAnalysis?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
 
 The dashboard is built with Tableau to show key metrics about Indego ridership pattern, identifying peak demand periods and popular stations. 
@@ -62,6 +62,6 @@ The dashboard is built with Tableau to show key metrics about Indego ridership p
 - Implement data partitioning and indexing in BigQuery.
 - Optimize data transformations using DBT.
 
-[**Step 4: Data Visualization**](https://us-east-1.online.tableau.com/t/kellyzheng-402c63b0c7/views/IndegoBikeshareAnalysis/IndegoBikeshareAnalysis)
+[**Step 4: Data Visualization**](https://public.tableau.com/views/DEproject_17433593480040/IndegoBikeshareAnalysis?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
 - Build Tableau dashboards for analytics and insights.
