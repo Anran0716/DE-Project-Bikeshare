@@ -4,7 +4,7 @@
 
 -- Step 1: Remove Duplicates
 WITH filtered AS (
-    {{ remove_duplicates('kestra-sandbox-451604.Indego_project.indego_trips_all') }}
+    {{ remove_duplicates('database.Indego_project.indego_trips_all') }}
 ),
 
 -- Step 2: Fill Station Coordinates

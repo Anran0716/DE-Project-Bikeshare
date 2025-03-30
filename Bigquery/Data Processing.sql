@@ -1,6 +1,6 @@
 
 -- Step 1: Remove Duplicates, Fill Missing Coordinates, Add Columns, and Join Station Names
-CREATE OR REPLACE TABLE kestra-sandbox-451604.Indego_project.indego_trips_all_v3 AS
+CREATE OR REPLACE TABLE database.Indego_project.indego_trips_all_v3 AS
 WITH deduplicated AS (
     SELECT 
         *, 
@@ -8,7 +8,7 @@ WITH deduplicated AS (
             PARTITION BY trip_id, start_time, end_time, start_station, end_station, bike_id, passholder_type 
             ORDER BY trip_id
         ) AS rn
-    FROM kestra-sandbox-451604.Indego_project.indego_trips_all
+    FROM database.Indego_project.indego_trips_all
     WHERE trip_id IS NOT NULL 
       AND start_time IS NOT NULL 
       AND end_time IS NOT NULL
@@ -66,9 +66,9 @@ LEFT JOIN station_coordinate sc_start
     ON f.start_station = sc_start.station_id
 LEFT JOIN station_coordinate sc_end
     ON f.end_station = sc_end.station_id
-LEFT JOIN `kestra-sandbox-451604.Indego_project.indego_stations` start_stations
+LEFT JOIN `database.Indego_project.indego_stations` start_stations
     ON f.start_station = start_stations.Station_ID
-LEFT JOIN `kestra-sandbox-451604.Indego_project.indego_stations` end_stations
+LEFT JOIN `database.Indego_project.indego_stations` end_stations
     ON f.end_station = end_stations.Station_ID;
 
 

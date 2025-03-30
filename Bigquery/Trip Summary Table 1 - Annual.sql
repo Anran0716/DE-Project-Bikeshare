@@ -1,4 +1,4 @@
-CREATE OR REPLACE TABLE `kestra-sandbox-451604.Indego_project.trip_summary_annual` AS
+CREATE OR REPLACE TABLE `database.Indego_project.trip_summary_annual` AS
 SELECT 
     year,
     CONCAT(ROUND(COUNT(*) / 1000000.0, 2), ' M') AS total_trips,
@@ -14,7 +14,7 @@ SELECT
     SAFE_CAST(COUNTIF(passholder_type = 'Indego30') * 100 / COUNT(*) AS INT) AS annual_pass_pct,
     SAFE_CAST(COUNTIF(passholder_type = 'Day Pass') * 100 / COUNT(*) AS INT) AS walkup_pct
 
-FROM `kestra-sandbox-451604.Indego_project.indego_trips_all_v2`
+FROM `database.Indego_project.indego_trips_all_v2`
 GROUP BY year
 ORDER BY year DESC;
 

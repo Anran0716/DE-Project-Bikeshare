@@ -2,7 +2,7 @@ version: 2
 
 sources:
   - name: staging
-    database: kestra-sandbox-451604
+    database: database
     schema: Indego_project
     tables:
       - name: indego_trips_all

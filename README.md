@@ -9,6 +9,7 @@ Philadelphia’s bikeshare system, [Indego](https://www.rideindego.com/), has pr
 ## Datasets
 
 -  [Indego bikeshare trip data 2023 - 2024](https://www.rideindego.com/about/data/)
+-  [Indego bikeshare station](https://github.com/Anran0716/DE-Project-Bikeshare/blob/main/DBT/seeds/indego-stations.csv)
 
 ## Workflow
 
@@ -18,7 +19,7 @@ The ETL pipeline is designed to Extract data from various sources, Transform it 
 - **Extraction:** Docker containerized Airflow orchestrates data extraction from CSV files.
 - **Loading:** Extracted data is loaded into BigQuery using Airflow DAGs.
 - **Transformation:** DBT performs data cleaning, normalization, and aggregation directly in BigQuery.
-- **Visualization:** Transformed data is visualized using Power BI, providing actionable insights into bike share usage.
+- **Visualization:** Transformed data is visualized using Tableau, providing actionable insights into bike share usage.
 
 
 ### Tools & Technology
@@ -28,9 +29,21 @@ The ETL pipeline is designed to Extract data from various sources, Transform it 
 - **Orchestration:** Apache Airflow (Containerized with Docker)
 - **Data Processing:** DBT for transformations
 - **Storage & Querying:** GCS, BigQuery
-- **Visualization:** Power BI
+- **Visualization:** Tableau
 
 ### Dashboard & Visualization
+
+[Dashboard](https://us-east-1.online.tableau.com/t/kellyzheng-402c63b0c7/views/IndegoBikeshareAnalysis/IndegoBikeshareAnalysis)
+
+
+The dashboard is built with Tableau to show key metrics about Indego ridership pattern, identifying peak demand periods and popular stations. 
+
+<img src="Figures/Dashboard.jpg" alt="wf" height="400" width="800">
+
+**Key Insights:**
+- **Bike Usage:** More people tend to choose e-bikes and monthly pass (Indego30). 
+- **Temporal Trends:** Ridership peaks during summer months, with the highest activity from May to September. There are more trips at weekdays compared to weekends. Peak riding hours are around 8 AM (morning commute) and 5-6 PM (evening commute).
+- **Station Activity:** 15th & Spruce is the most popular origin/destination station. Other popular stations include 23rd & South, 12th & Chestnut, 17th & Locust, and 34th & Spruce. Trip activities concentrated in the central Philadelphia downtown. 
 
 ## General Guidance
 
@@ -49,6 +62,6 @@ The ETL pipeline is designed to Extract data from various sources, Transform it 
 - Implement data partitioning and indexing in BigQuery.
 - Optimize data transformations using DBT.
 
-**Step 4: Data Visualization**
+[**Step 4: Data Visualization**](https://us-east-1.online.tableau.com/t/kellyzheng-402c63b0c7/views/IndegoBikeshareAnalysis/IndegoBikeshareAnalysis)
 
-- Build Power BI dashboards for analytics and insights.
+- Build Tableau dashboards for analytics and insights.

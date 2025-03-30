@@ -1,4 +1,4 @@
-CREATE OR REPLACE TABLE `kestra-sandbox-451604.Indego_project.station_trip_count_by_year` AS
+CREATE OR REPLACE TABLE `database.Indego_project.station_trip_count_by_year` AS
 WITH station_trips AS (
     SELECT 
         year,
@@ -8,7 +8,7 @@ WITH station_trips AS (
         start_lon AS lon,
         'origin' AS station_type,
         COUNT(*) AS trip_count
-    FROM `kestra-sandbox-451604.Indego_project.indego_trips_all_v2`
+    FROM `database.Indego_project.indego_trips_all_v2`
     WHERE start_station IS NOT NULL
     GROUP BY year, station_id, station_name, lat, lon
     
@@ -22,7 +22,7 @@ WITH station_trips AS (
         end_lon AS lon,
         'destination' AS station_type,
         COUNT(*) AS trip_count
-    FROM `kestra-sandbox-451604.Indego_project.indego_trips_all_v2`
+    FROM `database.Indego_project.indego_trips_all_v2`
     WHERE end_station IS NOT NULL
     GROUP BY year, station_id, station_name, lat, lon
 )
