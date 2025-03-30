@@ -1,6 +1,6 @@
 
 -- Step 1: Remove Duplicates, Fill Missing Coordinates, Add Columns, and Join Station Names
-CREATE OR REPLACE TABLE database.Indego_project.indego_trips_all_v3 AS
+CREATE OR REPLACE TABLE database.Indego_project.indego_trips_staging AS
 WITH deduplicated AS (
     SELECT 
         *, 

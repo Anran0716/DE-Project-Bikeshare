@@ -8,7 +8,7 @@ WITH station_trips AS (
         start_lon AS lon,
         'origin' AS station_type,
         COUNT(*) AS trip_count
-    FROM `database.Indego_project.indego_trips_all_v2`
+    FROM `database.Indego_project.indego_trips_staging`
     WHERE start_station IS NOT NULL
     GROUP BY year, station_id, station_name, lat, lon
     
@@ -22,7 +22,7 @@ WITH station_trips AS (
         end_lon AS lon,
         'destination' AS station_type,
         COUNT(*) AS trip_count
-    FROM `database.Indego_project.indego_trips_all_v2`
+    FROM `database.Indego_project.indego_trips_staging`
     WHERE end_station IS NOT NULL
     GROUP BY year, station_id, station_name, lat, lon
 )
