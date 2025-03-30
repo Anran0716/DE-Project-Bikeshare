@@ -14,7 +14,7 @@ SELECT
     SAFE_CAST(COUNTIF(passholder_type = 'Indego30') * 100 / COUNT(*) AS INT) AS annual_pass_pct,
     SAFE_CAST(COUNTIF(passholder_type = 'Day Pass') * 100 / COUNT(*) AS INT) AS walkup_pct
 
-FROM `database.Indego_project.indego_trips_all_v2`
+FROM `database.Indego_project.indego_trips_staging`
 GROUP BY year
 ORDER BY year DESC;
 
