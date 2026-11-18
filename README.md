@@ -59,7 +59,8 @@ The dashboard is built with Tableau to show key metrics about Indego ridership p
 
 [**Step 3: Data Transformation**](https://github.com/Anran0716/DE-Project-Bikeshare/tree/main/DBT)
 
-- Implement data partitioning and indexing in BigQuery.
+- Materialize cleaned fact and summary tables in BigQuery with DBT.
+- The checked-in Airflow DAG and DBT models do not configure table partitioning or clustering. `PARTITION BY` in the deduplication SQL is a window-function clause, not physical table partitioning.
 - Optimize data transformations using DBT.
 
 [**Step 4: Data Visualization**](https://public.tableau.com/views/DEproject_17433593480040/IndegoBikeshareAnalysis?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)

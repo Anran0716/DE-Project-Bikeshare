@@ -13,8 +13,8 @@ SELECT
     SAFE_CAST(COUNTIF(bike_type = 'standard') * 100 / COUNT(*) AS INT) AS classic_bike_pct,
 
     -- Passholder Type Percentages
-    SAFE_CAST(COUNTIF(passholder_type = 'Indego365') * 100 / COUNT(*) AS INT) AS monthly_pass_pct,
-    SAFE_CAST(COUNTIF(passholder_type = 'Indego30') * 100 / COUNT(*) AS INT) AS annual_pass_pct,
+    SAFE_CAST(COUNTIF(passholder_type = 'Indego365') * 100 / COUNT(*) AS INT) AS annual_pass_pct,
+    SAFE_CAST(COUNTIF(passholder_type = 'Indego30') * 100 / COUNT(*) AS INT) AS monthly_pass_pct,
     SAFE_CAST(COUNTIF(passholder_type = 'Day Pass') * 100 / COUNT(*) AS INT) AS walkup_pct
 
 FROM {{ ref('fact_trips') }}

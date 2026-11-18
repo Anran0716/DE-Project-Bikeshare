@@ -1,2 +1,16 @@
-keys/my-creds.json
+# Local credentials and environment configuration
+keys/
+**/google_credentials.json
+.env
+.env.*
+!.env.example
+
+# Local Terraform state and variable values
 Terraform/.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+!*.tfvars.example
+
+# Generated runtime logs (at any directory depth)
+logs/
