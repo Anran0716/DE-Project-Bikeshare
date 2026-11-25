@@ -18,8 +18,9 @@ station_coordinate AS (
         COALESCE(sc_end.lat, f.end_lat) AS end_lat,
         COALESCE(sc_end.lon, f.end_lon) AS end_lon,
 
-        -- Use the format_duration_time macro
-        {{ format_duration_time('f.duration', 'f.start_time') }},
+        -- Parse once; schema tests flag invalid values without dropping the rows.
+        SAFE.PARSE_TIMESTAMP('%m/%d/%Y %H:%M', f.start_time) AS start_ts,
+        SAFE.PARSE_TIMESTAMP('%m/%d/%Y %H:%M', f.end_time) AS end_ts
 
     FROM filtered f
     LEFT JOIN station_coordinate sc_start

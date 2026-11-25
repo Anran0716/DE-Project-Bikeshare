@@ -25,12 +25,30 @@ models:
           - not_null
 
       - name: start_time
-        description: The date/time when the trip began, presented in ISO 8601 format in local time
+        description: Raw trip start time string in local time (MM/DD/YYYY HH:MM)
         tests:
           - not_null
 
       - name: end_time
-        description: The date/time when the trip ended, presented in ISO 8601 format in local time
+        description: Raw trip end time string in local time (MM/DD/YYYY HH:MM)
+        tests:
+          - not_null
+
+      - name: start_ts
+        description: >
+          Trip start time parsed once as a TIMESTAMP using SAFE.PARSE_TIMESTAMP.
+          Uses the existing parser's default UTC convention, without local timezone conversion.
+          Invalid strings become NULL and fail the not_null test.
+        data_type: timestamp
+        tests:
+          - not_null
+
+      - name: end_ts
+        description: >
+          Trip end time parsed once as a TIMESTAMP using SAFE.PARSE_TIMESTAMP.
+          Uses the same timezone convention as start_ts.
+          Invalid strings become NULL and fail the not_null test.
+        data_type: timestamp
         tests:
           - not_null
 
@@ -55,5 +73,3 @@ models:
 
       - name: end_lon
         description: The longitude of the station where the trip terminated
-
-           

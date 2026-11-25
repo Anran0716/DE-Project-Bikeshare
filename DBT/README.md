@@ -29,6 +29,26 @@ To run the DBT model:
 - Run `dbt build`
 - If you want to check single model, using `dbt compile` and `dbt run --select {model_name}`
 
+The station lookup is committed as [`seeds/indego_stations.csv`](seeds/indego_stations.csv),
+so a clone includes the data needed by `ref('indego_stations')`. It contains 304 station
+records from the [public Indego station CSV](https://www.rideindego.com/wp-content/uploads/2025/01/indego-stations-2025-01-01.csv)
+used by the ingestion pipeline. Headers use snake_case, and the station ID has an
+explicit `INT64` seed type. `dbt build` loads this seed and tests station IDs for
+uniqueness and missing values. If replacing a seed already loaded with the old
+headers, run `dbt seed --full-refresh --select indego_stations` before `dbt build`.
+
+`stg_tripdata` handles deduplication, coordinate filling, and timestamp parsing.
+It parses raw `start_time` and `end_time` strings once into `start_ts` and `end_ts`
+with `SAFE.PARSE_TIMESTAMP('%m/%d/%Y %H:%M', ...)`. Malformed strings are retained
+as `NULL` timestamps and fail the corresponding `not_null` tests; they are not
+filtered out. Parsing preserves the previous default UTC convention and does not
+convert the source's local wall-clock times to America/New_York instants.
+
+The staging model no longer creates display labels or formatted durations.
+Hourly and monthly reports derive their labels directly from `start_ts`.
+The existing `core` layout and wide `fact_trips` are retained for this first step;
+station/date dimensions and the move of reports into `marts` are subsequent work.
+
 <img src="../Figures/DBT2.jpg" alt="airflow1" height="750" width="1500">
 
 After successfully running these models, in your Bigquery project, you should see a few table being created. 
