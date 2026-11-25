@@ -14,3 +14,7 @@ Terraform/.terraform/
 
 # Generated runtime logs (at any directory depth)
 logs/
+
+# Python bytecode
+__pycache__/
+*.pyc
