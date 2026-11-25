@@ -9,7 +9,7 @@ Philadelphia’s bikeshare system, [Indego](https://www.rideindego.com/), has pr
 ## Datasets
 
 -  [Indego bikeshare trip data 2023 - 2024](https://www.rideindego.com/about/data/)
--  [Indego bikeshare station](https://github.com/Anran0716/DE-Project-Bikeshare/blob/main/DBT/seeds/indego-stations.csv)
+-  [Indego bikeshare station](DBT/seeds/indego_stations.csv)
 
 ## Workflow
 

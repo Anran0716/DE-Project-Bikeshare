@@ -34,21 +34,21 @@ models:
         tests:
           - not_null
 
-      - name: start_ts
+      - name: start_dt
         description: >
-          Trip start time parsed once as a TIMESTAMP using SAFE.PARSE_TIMESTAMP.
-          Uses the existing parser's default UTC convention, without local timezone conversion.
+          Trip start time parsed once as a DATETIME using SAFE.PARSE_DATETIME.
+          Preserves Philadelphia local wall-clock time without a timezone.
           Invalid strings become NULL and fail the not_null test.
-        data_type: timestamp
+        data_type: datetime
         tests:
           - not_null
 
-      - name: end_ts
+      - name: end_dt
         description: >
-          Trip end time parsed once as a TIMESTAMP using SAFE.PARSE_TIMESTAMP.
-          Uses the same timezone convention as start_ts.
+          Trip end time parsed once as a DATETIME using SAFE.PARSE_DATETIME.
+          Preserves Philadelphia local wall-clock time without a timezone.
           Invalid strings become NULL and fail the not_null test.
-        data_type: timestamp
+        data_type: datetime
         tests:
           - not_null
 

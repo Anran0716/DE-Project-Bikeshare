@@ -4,7 +4,7 @@
 
 -- Step 1: Remove Duplicates
 WITH filtered AS (
-    {{ remove_duplicates('database.Indego_project.indego_trips_all') }}
+    {{ remove_duplicates(source('staging', 'indego_trips_all')) }}
 ),
 
 -- Step 2: Fill Station Coordinates
@@ -19,8 +19,8 @@ station_coordinate AS (
         COALESCE(sc_end.lon, f.end_lon) AS end_lon,
 
         -- Parse once; schema tests flag invalid values without dropping the rows.
-        SAFE.PARSE_TIMESTAMP('%m/%d/%Y %H:%M', f.start_time) AS start_ts,
-        SAFE.PARSE_TIMESTAMP('%m/%d/%Y %H:%M', f.end_time) AS end_ts
+        SAFE.PARSE_DATETIME('%m/%d/%Y %H:%M', f.start_time) AS start_dt,
+        SAFE.PARSE_DATETIME('%m/%d/%Y %H:%M', f.end_time) AS end_dt
 
     FROM filtered f
     LEFT JOIN station_coordinate sc_start

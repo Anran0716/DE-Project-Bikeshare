@@ -4,7 +4,7 @@
 
 SELECT 
     year,
-    FORMAT_TIMESTAMP('%B', start_ts) AS month_name,
+    FORMAT_DATETIME('%B', start_dt) AS month_name,
     bike_type,
     COUNT(*) AS total_trips
 FROM {{ ref('fact_trips') }}
