@@ -1,0 +1,24 @@
+version: 2
+
+seeds:
+  - name: indego_stations
+    description: >
+      Public Indego station snapshot, distributed with the project for reproducible builds.
+      Source: https://www.rideindego.com/wp-content/uploads/2025/01/indego-stations-2025-01-01.csv
+      CSV headers are normalized to snake_case; station records are unchanged.
+    config:
+      column_types:
+        station_id: INT64
+        station_name: STRING
+        go_live_date: STRING
+        status: STRING
+    columns:
+      - name: station_id
+        description: Station identifier used to join trip start and end stations.
+        tests:
+          - unique
+          - not_null
+      - name: station_name
+        description: Public station name.
+        tests:
+          - not_null

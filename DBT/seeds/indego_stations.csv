@@ -1,4 +1,4 @@
-Station_ID,Station_Name,Day of Go_live_date,Status
+station_id,station_name,go_live_date,status
 3000,Virtual Station,4/23/2015,Active
 3004,Municipal Services Building Plaza,4/23/2015,Inactive
 3005,"Welcome Park, NPS",4/23/2015,Active
